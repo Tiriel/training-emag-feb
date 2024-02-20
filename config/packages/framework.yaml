@@ -24,7 +24,7 @@ framework:
                 base_uri: 'https://www.omdbapi.com'
                 query:
                     plot: full
-                    apikey: '77e9a2a5'
+                    apikey: '%env(string:OMDB_API)%'
 
 when@test:
     framework:
