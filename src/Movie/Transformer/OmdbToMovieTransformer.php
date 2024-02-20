@@ -15,7 +15,7 @@ class OmdbToMovieTransformer implements OmdbTransformerInterface
         'Poster',
     ];
 
-    public function transform(array|string $value): object
+    public function transform(array|string $value): Movie
     {
         if (!\is_array($value) || 0 < \count(\array_diff(self::KEYS, \array_keys($value)))) {
             throw new \InvalidArgumentException();
